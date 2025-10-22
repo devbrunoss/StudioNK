@@ -4,12 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDIO NK - Barbearia Premium</title>
+    
+    <!-- Título Principal -->
+    <title>STUDIO NK - Barbearia Premium em São José dos Campos</title>
+    
+    <!-- Meta Description -->
+    <meta name="description" content="Barbearia premium em São José dos Campos. Cortes exclusivos, assinaturas mensais, produtos profissionais. Agende seu horário no Studio NK.">
+    
+    <!-- Keywords -->
+    <meta name="keywords" content="barbearia, corte de cabelo, São José dos Campos, studio nk, barba, cuidados masculinos, assinatura barbearia">
+    
+    <!-- Autor -->
+    <meta name="author" content="STUDIO NK">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon.ico">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="STUDIO NK - Barbearia Premium">
+    <meta property="og:description" content="Experiência única em cuidados masculinos. Cortes exclusivos, produtos premium e ambiente sofisticado em São José dos Campos.">
+    <meta property="og:image" content="./assets/og-image.jpeg">
+    <meta property="og:url" content="https://studionk.com.br">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Studio NK - Barbearia">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="STUDIO NK - Barbearia Premium">
+    <meta name="twitter:description" content="Experiência única em cuidados masculinos. Cortes exclusivos e ambiente sofisticado.">
+    <meta name="twitter:image" content="./assets/og-image.jpeg">
+    <meta name="twitter:site" content="@studionk">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://studionk.com.br">
+    
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0f1421">
+    <meta name="msapplication-TileColor" content="#0f1421">
+    
+    <!-- Apple Mobile Web App -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="STUDIO NK">
+    
+    <!-- Preconnect para performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -190,12 +243,26 @@ header {
     width: 100%;
     z-index: 1000;
     padding: 20px 5%;
-    background: var(--transparente);
+    background: transparent;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+    border-bottom: 1px solid transparent;
+    transition: all 0.6s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Quando o header for ativado após a hero */
+header.visible {
+    background: rgba(15, 20, 33, 0.9);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.3s ease;
+    opacity: 1;
+    pointer-events: all;
+    padding: 15px 5%;
 }
+
 
 header.scrolled {
     padding: 15px 5%;
@@ -294,8 +361,6 @@ nav ul li a:hover::after {
 .hero-logo {
     height: 120px;
     margin-bottom: 30px;
-    filter: brightness(0) invert(1);
-    animation: float 6s ease-in-out infinite;
 }
 
 .hero-tagline {
@@ -1221,6 +1286,865 @@ footer {
         font-size: 16px;
     }
 }
+
+/* CSS - NOVOS DESIGNS SEÇÕES */
+
+/* Seção Membros - ESTILO PREMIUM CLEAN */
+.membros-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 1.1rem;
+    color: var(--branco);
+    opacity: 0.9;
+}
+
+/* Grid de planos premium */
+.planos-grid-moderno {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+/* Cards de planos premium */
+.plano-card-moderno {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.plano-card-moderno:hover {
+    transform: translateY(-8px);
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Header do plano */
+.plano-header {
+    padding: 30px 25px 20px;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.plano-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, var(--dourado) 0%, var(--dourado-tech) 100%);
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.plano-icon-moderno {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--dourado);
+    transition: transform 0.3s ease;
+}
+
+.plano-card-moderno:hover .plano-icon-moderno {
+    transform: scale(1.1);
+}
+
+.plano-title-moderno {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--dourado);
+    font-weight: 600;
+}
+
+.plano-price-moderno {
+    margin-bottom: 0;
+}
+
+.plano-price-moderno .valor {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--branco);
+}
+
+.plano-price-moderno .periodo {
+    font-size: 0.9rem;
+    color: var(--branco);
+    opacity: 0.7;
+}
+
+/* Body do plano */
+.plano-body {
+    padding: 25px;
+}
+
+.plano-features-moderno {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.plano-features-moderno li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 8px 0;
+    color: var(--branco);
+    font-weight: 300;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+}
+
+.plano-features-moderno li:hover {
+    transform: translateX(5px);
+}
+
+.plano-features-moderno li i {
+    color: var(--dourado);
+    margin-right: 12px;
+    font-size: 0.9rem;
+    min-width: 16px;
+}
+
+/* Botão premium */
+.btn-plano-moderno {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-plano-moderno:hover {
+    background: var(--dourado);
+    color: var(--preto);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-plano-moderno.destaque {
+    background: var(--dourado);
+    color: var(--preto);
+    border-color: var(--dourado);
+}
+
+.btn-plano-moderno.destaque:hover {
+    background: var(--dourado-claro);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* Destaque de economia */
+.economia-destaque {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.economia-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.economia-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+.economia-item i {
+    color: var(--dourado);
+    font-size: 1.3rem;
+    margin-right: 12px;
+}
+
+.economia-item span {
+    color: var(--branco);
+    font-weight: 400;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .planos-grid-moderno {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .planos-grid-moderno {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .economia-destaque {
+        grid-template-columns: 1fr;
+    }
+    
+    .plano-header {
+        padding: 25px 20px 15px;
+    }
+    
+    .plano-body {
+        padding: 20px;
+    }
+}
+
+/* Seção Vantagens - ESTILO MODERNO */
+.vantagens-text {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    font-size: 1.1rem;
+    color: var(--branco);
+    opacity: 0.9;
+}
+
+/* Grid de vantagens moderno */
+.vantagens-grid-moderno {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+/* Item de vantagem moderno */
+.vantagem-item-moderno {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 30px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.vantagem-item-moderno::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transition: left 0.6s ease;
+}
+
+.vantagem-item-moderno:hover::before {
+    left: 100%;
+}
+
+.vantagem-item-moderno:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Número da vantagem */
+.vantagem-numero {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dourado);
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+    min-width: 80px;
+    text-align: center;
+    line-height: 1;
+}
+
+/* Conteúdo da vantagem */
+.vantagem-conteudo {
+    flex: 1;
+}
+
+.vantagem-title-moderno {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: var(--branco);
+    font-weight: 600;
+    text-transform: lowercase;
+}
+
+.vantagem-title-moderno::first-letter {
+    text-transform: uppercase;
+}
+
+.vantagem-desc-moderno {
+    font-size: 0.9rem;
+    color: var(--branco);
+    opacity: 0.8;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Ícone da vantagem */
+.vantagem-icon-moderno {
+    color: var(--dourado);
+    font-size: 1.8rem;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    min-width: 40px;
+    text-align: center;
+}
+
+.vantagem-item-moderno:hover .vantagem-icon-moderno {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* CTA da seção */
+.vantagens-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .vantagens-grid-moderno {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .vantagem-item-moderno {
+        padding: 25px 20px;
+        gap: 15px;
+    }
+    
+    .vantagem-numero {
+        font-size: 2rem;
+        min-width: 60px;
+    }
+    
+    .vantagem-icon-moderno {
+        font-size: 1.5rem;
+        min-width: 30px;
+    }
+    
+    .vantagem-title-moderno {
+        font-size: 1.1rem;
+    }
+    
+    .vantagem-desc-moderno {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .vantagem-item-moderno {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .vantagem-numero {
+        min-width: auto;
+    }
+    
+    .vantagem-conteudo {
+        width: 100%;
+    }
+}
+
+/* Seção Vantagens - ATUALIZADA */
+.vantagens-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.vantagem-item {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 30px 25px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.vantagem-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transition: left 0.6s ease;
+}
+
+.vantagem-item:hover::before {
+    left: 100%;
+}
+
+.vantagem-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.vantagem-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--dourado);
+    transition: all 0.3s ease;
+}
+
+.vantagem-item:hover .vantagem-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3));
+}
+
+.vantagem-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--branco);
+    font-weight: 600;
+}
+
+.vantagem-desc {
+    font-size: 0.95rem;
+    color: var(--branco);
+    opacity: 0.8;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.vantagens-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Responsividade para 8 itens */
+@media (max-width: 1200px) {
+    .vantagens-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .vantagens-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .vantagem-item {
+        padding: 25px 20px;
+    }
+    
+    .vantagem-icon {
+        font-size: 2.2rem;
+    }
+}
+
+/* Footer Completo e Premium */
+footer {
+    background: linear-gradient(135deg, #0a0e1a 0%, #0f1421 100%);
+    padding: 60px 5% 0;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 50px;
+    padding-bottom: 40px;
+}
+
+/* Brand Section */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    height: 50px;
+    margin-bottom: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-bio {
+    font-size: 1.1rem;
+    color: var(--branco);
+    opacity: 0.9;
+    line-height: 1.6;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Links Section */
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.links-column h4 {
+    color: var(--dourado);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.links-column ul {
+    list-style: none;
+}
+
+.links-column li {
+    margin-bottom: 12px;
+}
+
+.links-column a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 300;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.links-column a:hover {
+    color: var(--dourado);
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+/* Contact Section */
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer-contact h4 {
+    color: var(--dourado);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.social-icons-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-icon-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: var(--branco);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon-footer:hover {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: rgba(212, 175, 55, 0.3);
+    transform: translateY(-2px);
+}
+
+.social-icon-footer i {
+    color: var(--dourado);
+    font-size: 1.2rem;
+    width: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--branco);
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+.contact-item i {
+    color: var(--dourado);
+    width: 16px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 25px 5%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    color: #888;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.copyright span {
+    color: var(--dourado);
+}
+
+.dev-credit {
+    color: #666;
+    font-size: 0.8rem;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    
+    .footer-links {
+        grid-column: 1 / -1;
+        order: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-contact {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .footer-bottom .container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-contact {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        gap: 30px;
+    }
+    
+    footer {
+        padding: 40px 5% 0;
+    }
+    
+    .footer-brand {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Footer Simplificado e Elegante */
+footer {
+    background: linear-gradient(135deg, #0a0e1a 0%, #0f1421 100%);
+    padding: 50px 5% 0;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+/* Seções do Footer */
+.footer-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-section h4 {
+    color: var(--dourado);
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Redes Sociais */
+.social-icons-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-icon-footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: var(--branco);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon-footer:hover {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: rgba(212, 175, 55, 0.3);
+    transform: translateY(-3px);
+}
+
+.social-icon-footer i {
+    color: var(--dourado);
+    font-size: 1.3rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* Informações de Contato */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--branco);
+    opacity: 0.9;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.contact-item i {
+    color: var(--dourado);
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* Studio NK Section */
+.footer-bio {
+    font-size: 1.1rem;
+    color: var(--branco);
+    opacity: 0.9;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    height: 60px;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 25px 5%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.copyright {
+    color: #888;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.copyright span {
+    color: var(--dourado);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .social-icon-footer {
+        justify-content: center;
+    }
+    
+    .contact-item {
+        justify-content: center;
+    }
+    
+    .footer-section {
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 40px 5% 0;
+    }
+    
+    .footer-content {
+        gap: 35px;
+    }
+    
+    .social-icon-footer {
+        padding: 12px 15px;
+    }
+    
+    .footer-logo {
+        height: 50px;
+    }
+}
     </style>
 </head>
 
@@ -1256,6 +2180,7 @@ footer {
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-content">
+            <img src="./assets/logo-nk.png" alt="STUDIO NK" class="hero-logo">
             <p class="hero-tagline">Seu estilo é nossa prioridade!</p>
             <div class="hero-buttons">
                 <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar um horário no STUDIO NK"
@@ -1265,230 +2190,333 @@ footer {
         </div>
     </section>
 
-    <!-- Seção Membros -->
-    <section class="membros" id="membros">
-        <div class="container">
-            <h2><span style="color: #ffffff;">Seja um</span> Membro <span style="color: #ffffff;">do Clube</span></h2>
-            <p class="membros-text">Corte e barba sempre em dia, sem surpresas no bolso. Nossos planos foram criados
-                para quem busca conveniência, estilo e economia.</p>
+    <!-- Seção Membros - VERSÃO PREMIUM CLEAN -->
+<section class="membros" id="membros">
+    <div class="container">
+        <h2>Seja um Membro do Clube</h2>
+        <p class="membros-text">Um clube para quem entende que cuidar de si é um estilo de vida. Tenha acesso a serviços premium, experiências únicas e vantagens exclusivas.</p>
 
-            <div class="planos-grid">
-                <!-- Plano 1 -->
-                <div class="plano-card hidden">
-                    <div class="plano-icon">
+        <div class="planos-grid-moderno">
+            <!-- Plano 1 - Básico -->
+            <div class="plano-card-moderno hidden">
+                <div class="plano-header">
+                    <div class="plano-icon-moderno">
                         <i class="fas fa-crown"></i>
                     </div>
-                    <h3 class="plano-title">Básico</h3>
-                    <div class="plano-price">R$ 89,90/mês</div>
-                    <ul class="plano-features">
-                        <li><i class="fas fa-check"></i> 1 Corte por mês</li>
-                        <li><i class="fas fa-check"></i> Produtos premium</li>
-                        <li><i class="fas fa-check"></i> Bebida inclusa</li>
-                    </ul>
-                    <a href="#" class="btn btn-secondary">Ver mais</a>
+                    <h3 class="plano-title-moderno">Clube Corte Ilimitado</h3>
+                    <div class="plano-price-moderno">
+                        <span class="valor">R$ 69,90</span>
+                        <span class="periodo">/mês</span>
+                    </div>
                 </div>
+                <div class="plano-body">
+                    <ul class="plano-features-moderno">
+                        <li><i class="fas fa-check"></i> Cortes ilimitados no mês</li>
+                        <li><i class="fas fa-check"></i> Atendimento sem filas</li>
+                        <li><i class="fas fa-check"></i> 40% de desconto em produtos e atendimento com toda a equipe<li>
+                    </ul>
+                    <div class="plano-cta">
+                        <a href="https://celcash.celcoin.com.br/landingpage7810471/studionk/assinar/clube-corte-ilimitado/1" class="btn-plano-moderno">Assinar</a>
+                    </div>
+                </div>
+            </div>
 
-                <!-- Plano 2 -->
-                <div class="plano-card hidden">
-                    <div class="plano-icon">
+            <!-- Plano 2 - Essencial -->
+            <div class="plano-card-moderno hidden">
+                <div class="plano-header">
+                    <div class="plano-icon-moderno">
                         <i class="fas fa-gem"></i>
                     </div>
-                    <h3 class="plano-title">Essencial</h3>
-                    <div class="plano-price">R$ 149,90/mês</div>
-                    <ul class="plano-features">
-                        <li><i class="fas fa-check"></i> 2 Cortes por mês</li>
-                        <li><i class="fas fa-check"></i> 1 Barba por mês</li>
-                        <li><i class="fas fa-check"></i> Produtos premium</li>
-                        <li><i class="fas fa-check"></i> Bebida inclusa</li>
-                    </ul>
-                    <a href="#" class="btn btn-secondary">Ver mais</a>
+                    <h3 class="plano-title-moderno">Clube Barba Ilimitado</h3>
+                    <div class="plano-price-moderno">
+                        <span class="valor">R$ 79,90</span>
+                        <span class="periodo">/mês</span>
+                    </div>
                 </div>
+                <div class="plano-body">
+                    <ul class="plano-features-moderno">
+                        <li><i class="fas fa-check"></i> Barbas ilimitadas no mês</li>
+                        <li><i class="fas fa-check"></i> Toalha quente</li>
+                        <li><i class="fas fa-check"></i> 40% de desconto em produtos de barbear e atendimento com toda a equipe</li>                   
+                    </ul>
+                    <div class="plano-cta">
+                        <a href="https://celcash.celcoin.com.br/landingpage7810471/studionk/assinar/clube-barba-ilimitado/6" class="btn-plano-moderno">Assinar</a>
+                    </div>
+                </div>
+            </div>
 
-                <!-- Plano 3 -->
-                <div class="plano-card hidden">
-                    <div class="plano-icon">
+            <!-- Plano 3 - Premium -->
+            <div class="plano-card-moderno hidden">
+                <div class="plano-header">
+                    <div class="plano-icon-moderno">
                         <i class="fas fa-star"></i>
                     </div>
-                    <h3 class="plano-title">Premium</h3>
-                    <div class="plano-price">R$ 199,90/mês</div>
-                    <ul class="plano-features">
-                        <li><i class="fas fa-check"></i> Cortes ilimitados</li>
-                        <li><i class="fas fa-check"></i> 2 Barbas por mês</li>
-                        <li><i class="fas fa-check"></i> Produtos premium</li>
-                        <li><i class="fas fa-check"></i> Bebida premium</li>
-                        <li><i class="fas fa-check"></i> 10% em produtos</li>
-                    </ul>
-                    <a href="#" class="btn btn-secondary">Ver mais</a>
+                    <h3 class="plano-title-moderno">Clube Combo Ilimitado</h3>
+                    <div class="plano-price-moderno">
+                        <span class="valor">R$ 149,90</span>
+                        <span class="periodo">/mês</span>
+                    </div>
                 </div>
+                <div class="plano-body">
+                    <ul class="plano-features-moderno">
+                        <li><i class="fas fa-check"></i> Cortes e barbas ilimitados</li>
+                        <li><i class="fas fa-check"></i> 40% de desconto em todos os produtos e servições extras</li>
+                        <li><i class="fas fa-check"></i> atendimento com toda a equipe</li>
+                    </ul>
+                    <div class="plano-cta">
+                        <a href="https://celcash.celcoin.com.br/landingpage7810471/studionk/assinar/clube-combo-ilimitado/7" class="btn-plano-moderno">Assinar</a>
+                    </div>
+                </div>
+            </div>
 
-                <!-- Plano 4 -->
-                <div class="plano-card hidden">
-                    <div class="plano-icon">
+            <!-- Plano 4 - VIP -->
+            <div class="plano-card-moderno hidden">
+                <div class="plano-header">
+                    <div class="plano-badge">MAIS VENDIDO</div>
+                    <div class="plano-icon-moderno">
                         <i class="fas fa-award"></i>
                     </div>
-                    <h3 class="plano-title">VIP</h3>
-                    <div class="plano-price">R$ 299,90/mês</div>
-                    <ul class="plano-features">
-                        <li><i class="fas fa-check"></i> Cortes ilimitados</li>
-                        <li><i class="fas fa-check"></i> Barbas ilimitadas</li>
-                        <li><i class="fas fa-check"></i> Produtos premium</li>
-                        <li><i class="fas fa-check"></i> Bebida premium</li>
-                        <li><i class="fas fa-check"></i> 15% em produtos</li>
-                        <li><i class="fas fa-check"></i> Prioridade no agendamento</li>
-                    </ul>
-                    <a href="#" class="btn btn-secondary">Ver mais</a>
+                    <h3 class="plano-title-moderno">Clube VIP</h3>
+                    <div class="plano-price-moderno">
+                        <span class="valor">R$ 169,90</span>
+                        <span class="periodo">/mês</span>
+                    </div>
                 </div>
+                <div class="plano-body">
+                    <ul class="plano-features-moderno">
+                        <li><i class="fas fa-check"></i> Horário fixo com o NK</li>
+                        <li><i class="fas fa-check"></i> Sobrancelha inclusa</li>
+                        <li><i class="fas fa-check"></i> Desconto em produtos</li>
+                        <li><i class="fas fa-check"></i> Maquiagem capilar e finalização</li>
+                    </ul>
+                    <div class="plano-cta">
+                        <a href="https://celcash.celcoin.com.br/landingpage7810471/studionk/assinar/clube-vip/2" class="btn-plano-moderno destaque">Assinar</a>
+                    </div>
+                </div>
+            </div>
 
-                <!-- Plano 5 -->
-                <div class="plano-card hidden">
-                    <div class="plano-icon">
+            <!-- Plano 5 - Magnata -->
+            <div class="plano-card-moderno hidden">
+                <div class="plano-header">
+                    <div class="plano-badge">MAIS VENDIDO</div>
+                    <div class="plano-icon-moderno">
                         <i class="fas fa-diamond"></i>
                     </div>
-                    <h3 class="plano-title">Magnata</h3>
-                    <div class="plano-price">R$ 499,90/mês</div>
-                    <ul class="plano-features">
-                        <li><i class="fas fa-check"></i> Cortes ilimitados</li>
-                        <li><i class="fas fa-check"></i> Barbas ilimitadas</li>
-                        <li><i class="fas fa-check"></i> Produtos premium</li>
-                        <li><i class="fas fa-check"></i> Bebida premium</li>
-                        <li><i class="fas fa-check"></i> 20% em produtos</li>
-                        <li><i class="fas fa-check"></i> Prioridade total</li>
-                        <li><i class="fas fa-check"></i> Acesso a eventos exclusivos</li>
+                    <h3 class="plano-title-moderno">Clube Premium</h3>
+                    <div class="plano-price-moderno">
+                        <span class="valor">R$ 249,90</span>
+                        <span class="periodo">/mês</span>
+                    </div>
+                </div>
+                <div class="plano-body">
+                    <ul class="plano-features-moderno">
+                        <li><i class="fas fa-check"></i> Cabelo e barba inclusos</li>
+                        <li><i class="fas fa-check"></i> Horário fixo com o NK</li>
+                        <li><i class="fas fa-check"></i> Sobrancelha inclusa</li>
+                        <li><i class="fas fa-check"></i> 1 serviço extra de ticket alto (ex: limpeza facial)</li>
+                        <li><i class="fas fa-check"></i> Todos os extras de ticket baixo inclusos</li>
+                        <li><i class="fas fa-check"></i> 1 brinde da barbearia</li>
+                        <li><i class="fas fa-check"></i> 50% de desconto em produtos</li>
                     </ul>
-                    <a href="#" class="btn btn-secondary">Ver mais</a>
+                    <div class="plano-cta">
+                        <a href="https://celcash.celcoin.com.br/landingpage7810471/studionk/assinar/clube-premium/3" class="btn-plano-moderno destaque">Assinar</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Seção Vantagens -->
-    <section class="vantagens" id="vantagens">
-        <div class="container">
-            <h2>Vantagens Exclusivas dos Membros</h2>
-            <p class="vantagens-text">Desfrute de benefícios únicos que só um verdadeiro Magnata merece.</p>
-
-            <div class="vantagens-grid">
-                <!-- Vantagem 1 -->
-                <div class="vantagem-item hidden">
-                    <div class="vantagem-icon">
-                        <i class="fas fa-percent"></i>
-                    </div>
-                    <h3 class="vantagem-title">Descontos Exclusivos</h3>
-                    <p class="vantagem-desc">Descontos progressivos em produtos e serviços conforme seu plano.</p>
-                </div>
-
-                <!-- Vantagem 2 -->
-                <div class="vantagem-item hidden">
-                    <div class="vantagem-icon">
-                        <i class="fas fa-gift"></i>
-                    </div>
-                    <h3 class="vantagem-title">Brindes Mensais</h3>
-                    <p class="vantagem-desc">Receba brindes exclusivos mensalmente, de produtos a acessórios premium.
-                    </p>
-                </div>
-
-                <!-- Vantagem 3 -->
-                <div class="vantagem-item hidden">
-                    <div class="vantagem-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3 class="vantagem-title">Prioridade no Agendamento</h3>
-                    <p class="vantagem-desc">Agendamento prioritário com horários reservados exclusivamente para
-                        membros.</p>
-                </div>
-
-                <!-- Vantagem 4 -->
-                <div class="vantagem-item hidden">
-                    <div class="vantagem-icon">
-                        <i class="fas fa-cut"></i>
-                    </div>
-                    <h3 class="vantagem-title">Cortes Exclusivos</h3>
-                    <p class="vantagem-desc">Acesso a cortes e estilos exclusivos disponíveis apenas para membros do
-                        clube.</p>
-                </div>
-
-                <!-- Vantagem 5 -->
-                <div class="vantagem-item hidden">
-                    <div class="vantagem-icon">
-                        <i class="fas fa-glass-cheers"></i>
-                    </div>
-                    <h3 class="vantagem-title">Eventos VIP</h3>
-                    <p class="vantagem-desc">Convites para eventos exclusivos, degustações e encontros com
-                        especialistas.</p>
-                </div>
-
-                <!-- Vantagem 6 -->
-                <div class="vantagem-item hidden">
-                    <div class="vantagem-icon">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <h3 class="vantagem-title">Atendimento Personalizado</h3>
-                    <p class="vantagem-desc">Barbeiro dedicado e plano de cuidados personalizado para suas necessidades.
-                    </p>
-                </div>
+        <!-- Destaque de economia -->
+        <div class="economia-destaque hidden">
+            <div class="economia-item">
+                <i class="fas fa-piggy-bank"></i>
+                <span>Economize até R$ 600/ano</span>
             </div>
-
-            <div class="vantagens-cta">
-                <a href="#" class="btn btn-primary">Assinar Agora</a>
+            <div class="economia-item">
+                <i class="fas fa-clock"></i>
+                <span>Agendamento 24/7</span>
+            </div>
+            <div class="economia-item">
+                <i class="fas fa-star"></i>
+                <span>Benefícios exclusivos</span>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Seção Por que escolher -->
-    <section class="porque" id="porque">
-        <div class="container">
-            <h2><span style="color: #ffffff;">Por que escolher</span> STUDIO NK?</h2>
+    <!-- Seção Vantagens - ATUALIZADA COM BENEFÍCIOS REAIS -->
+<section class="vantagens" id="vantagens">
+    <div class="container">
+        <h2>Vantagens Exclusivas dos Membros</h2>
+        <p class="vantagens-text">Aproveite privilégios e experiências premium reservados apenas aos clientes mais exigentes</p>
 
-            <div class="motivos-grid">
-                <!-- Motivo 1 -->
-                <div class="motivo-card hidden">
-                    <div class="motivo-icon">
-                        <i class="fas fa-user-graduate"></i>
-                    </div>
-                    <h3 class="motivo-title">Profissionais Experientes</h3>
-                    <p class="motivo-desc">Nossa equipe é composta por barbeiros altamente qualificados com anos de
-                        experiência no mercado.</p>
+        <div class="vantagens-grid">
+            <!-- Vantagem 1 -->
+            <div class="vantagem-item hidden">
+                <div class="vantagem-icon">
+                    <i class="fas fa-spa"></i>
                 </div>
+                <h3 class="vantagem-title">Serviço Extra Premium</h3>
+                <p class="vantagem-desc">1 serviço extra de ticket alto por mês (limpeza facial ou tratamento especial).</p>
+            </div>
 
-                <!-- Motivo 2 -->
-                <div class="motivo-card hidden">
-                    <div class="motivo-icon">
-                        <i class="fas fa-spa"></i>
-                    </div>
-                    <h3 class="motivo-title">Ambiente Sofisticado</h3>
-                    <p class="motivo-desc">Um espaço exclusivo e aconchegante, projetado para oferecer o máximo em
-                        conforto e elegância.</p>
+            <!-- Vantagem 2 -->
+            <div class="vantagem-item hidden">
+                <div class="vantagem-icon">
+                    <i class="fas fa-star"></i>
                 </div>
+                <h3 class="vantagem-title">Extras Inclusos</h3>
+                <p class="vantagem-desc">Todos os extras de ticket baixo inclusos na sua assinatura mensal.</p>
+            </div>
 
-                <!-- Motivo 3 -->
-                <div class="motivo-card hidden">
-                    <div class="motivo-icon">
-                        <i class="fas fa-pump-soap"></i>
-                    </div>
-                    <h3 class="motivo-title">Produtos Premium</h3>
-                    <p class="motivo-desc">Utilizamos apenas as melhores marcas e produtos de qualidade superior para
-                        seus cuidados.</p>
+            <!-- Vantagem 3 -->
+            <div class="vantagem-item hidden">
+                <div class="vantagem-icon">
+                    <i class="fas fa-gift"></i>
                 </div>
+                <h3 class="vantagem-title">Brinde Exclusivo</h3>
+                <p class="vantagem-desc">1 brinde mensal da barbearia com produtos selecionados.</p>
+            </div>
 
-                <!-- Motivo 4 -->
-                <div class="motivo-card hidden">
-                    <div class="motivo-icon">
-                        <i class="fas fa-concierge-bell"></i>
-                    </div>
-                    <h3 class="motivo-title">Atendimento Personalizado</h3>
-                    <p class="motivo-desc">Cada cliente é único e recebe um atendimento totalmente personalizado às suas
-                        necessidades.</p>
+            <!-- Vantagem 4 -->
+            <div class="vantagem-item hidden">
+                <div class="vantagem-icon">
+                    <i class="fas fa-tags"></i>
+                </div>
+                <h3 class="vantagem-title">50% Off Produtos</h3>
+                <p class="vantagem-desc">50% de desconto em todos os produtos da barbearia.</p>
+            </div>
+
+            <!-- Vantagem 5 -->
+            <div class="vantagem-item hidden">
+                <div class="vantagem-icon">
+                    <i class="fas fa-infinity"></i>
+                </div>
+                <h3 class="vantagem-title">Cortes Ilimitados</h3>
+                <p class="vantagem-desc">Cortes e barbas ilimitados durante o período da sua assinatura.</p>
+            </div>
+
+            <!-- Vantagem 6 -->
+            <div class="vantagem-item hidden">
+                <div class="vantagem-icon">
+                    <i class="fas fa-percent"></i>
+                </div>
+                <h3 class="vantagem-title">40% Off Serviços</h3>
+                <p class="vantagem-desc">40% de desconto em todos os produtos e serviços extras adicionais.</p>
+            </div>
+
+            <!-- Vantagem 7 -->
+            <div class="vantagem-item hidden">
+                <div class="vantagem-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="vantagem-title">Atendimento Completo</h3>
+                <p class="vantagem-desc">Atendimento com toda a equipe especializada da Studio NK.</p>
+            </div>
+
+            <!-- Vantagem 8 -->
+            <div class="vantagem-item hidden">
+                <div class="vantagem-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3 class="vantagem-title">Finalização Premium</h3>
+                <p class="vantagem-desc">Maquiagem capilar e finalização profissional inclusas.</p>
+            </div>
+        </div>
+
+        <div class="vantagens-cta">
+            <a href="https://celcash.celcoin.com.br/landingpage7810471/studionk" class="btn btn-primary">Assinar Agora</a>
+        </div>
+    </div>
+</section>
+
+    <!-- Seção Por que - VERSÃO COM NÚMEROS IMPACTANTES -->
+<section class="vantagens" id="vantagens">
+    <div class="container">
+        <h2>Por que escolher STUDIO NK?</h2>
+
+        <div class="vantagens-grid-moderno">
+            <!-- Vantagem 1 -->
+            <div class="vantagem-item-moderno hidden">
+                <div class="vantagem-numero">+5</div>
+                <div class="vantagem-conteudo">
+                    <h3 class="vantagem-title-moderno">anos de tradição</h3>
+                    <p class="vantagem-desc-moderno">Anos de excelência e dedicação em cada corte</p>
+                </div>
+                <div class="vantagem-icon-moderno">
+                    <i class="fas fa-award"></i>
+                </div>
+            </div>
+
+            <!-- Vantagem 2 -->
+            <div class="vantagem-item-moderno hidden">
+                <div class="vantagem-numero">+10.000</div>
+                <div class="vantagem-conteudo">
+                    <h3 class="vantagem-title-moderno">cortes realizados</h3>
+                    <p class="vantagem-desc-moderno">Experiência comprovada em cada atendimento</p>
+                </div>
+                <div class="vantagem-icon-moderno">
+                    <i class="fas fa-scissors"></i>
+                </div>
+            </div>
+
+            <!-- Vantagem 3 -->
+            <div class="vantagem-item-moderno hidden">
+                <div class="vantagem-numero">100%</div>
+                <div class="vantagem-conteudo">
+                    <h3 class="vantagem-title-moderno">profissionais especializados</h3>
+                    <p class="vantagem-desc-moderno">Equipe altamente qualificada e atualizada</p>
+                </div>
+                <div class="vantagem-icon-moderno">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+            </div>
+
+            <!-- Vantagem 4 -->
+            <div class="vantagem-item-moderno hidden">
+                <div class="vantagem-numero">0</div>
+                <div class="vantagem-conteudo">
+                    <h3 class="vantagem-title-moderno">espera desnecessária</h3>
+                    <p class="vantagem-desc-moderno">Atendimento sob agendamento com horário garantido</p>
+                </div>
+                <div class="vantagem-icon-moderno">
+                    <i class="fas fa-clock"></i>
+                </div>
+            </div>
+
+            <!-- Vantagem 5 -->
+            <div class="vantagem-item-moderno hidden">
+                <div class="vantagem-numero">Premium</div>
+                <div class="vantagem-conteudo">
+                    <h3 class="vantagem-title-moderno">produtos profissionais</h3>
+                    <p class="vantagem-desc-moderno">Apenas marcas premium de primeira linha</p>
+                </div>
+                <div class="vantagem-icon-moderno">
+                    <i class="fas fa-pump-soap"></i>
+                </div>
+            </div>
+
+            <!-- Vantagem 6 -->
+            <div class="vantagem-item-moderno hidden">
+                <div class="vantagem-numero">Ambiente</div>
+                <div class="vantagem-conteudo">
+                    <h3 class="vantagem-title-moderno">elegante e sofisticado</h3>
+                    <p class="vantagem-desc-moderno">Espaços confortáveis pensados para sua experiência</p>
+                </div>
+                <div class="vantagem-icon-moderno">
+                    <i class="fas fa-spa"></i>
                 </div>
             </div>
         </div>
-    </section>
+
+    </div>
+</section>
 
     <!-- Seção Reserva -->
     <section class="reserva" id="reserva">
         <div class="container">
             <h2>Reserve seu horário com estilo</h2>
             <p class="reserva-text">Agende seu momento com a elegância e exclusividade que você merece.</p>
-            <a href="#reserva" class="btn btn-primary">Reservar Agora</a>
+            <a href="https://l.instagram.com/?u=https%3A%2F%2Fonline.maapp.com.br%2FStudionkbarbearia%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAaf_1Md_glFNNbnVcvp741coUHJvPWkmKfXu98-ZbTH78xS5kOvllklOJe-DJw_aem_Q2l_5Ps-UKZG1WZWzB7qfw&e=AT1jYM178QCaZ6TWbnQf3XR7gVHrYeVcyKVLkn30tLTOIQKx066OvvPl30c2Ra2ldcJCIUR9Pz9YSOEabyCThNa5L4rI9Z_CEHuSEY2SW1C_cS73wJaW-Zjl-A" class="btn btn-primary">Reservar Agora</a>
         </div>
     </section>
 
@@ -1514,64 +2542,56 @@ footer {
         </div>
     </section>
 
-    <!-- Seção Redes Sociais -->
-    <section class="redes-sociais" id="redes">
-        <div class="container">
-            <h2>Redes Sociais</h2>
-
-            <div class="redes-grid">
-                <!-- Instagram -->
-                <div class="rede-card hidden">
-                    <div class="rede-icon">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                    <h3 class="rede-title">Instagram</h3>
-                    <p class="rede-desc">@studionkbarbearia</p>
-                    <ul class="rede-features">
-                        <li><i class="fas fa-check"></i> Cortes da semana</li>
-                        <li><i class="fas fa-check"></i> Bastidores da barbearia</li>
-                        <li><i class="fas fa-check"></i> Dicas de cuidados masculinos</li>
-                        <li><i class="fas fa-check"></i> Novidades e promoções</li>
-                    </ul>
-                    <a href="https://instagram.com/studionkbarbearia" class="rede-link">Siga-nos no Instagram</a>
-                </div>
-
-                <!-- WhatsApp -->
-                <div class="rede-card hidden">
-                    <div class="rede-icon">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <h3 class="rede-title">WhatsApp</h3>
-                    <p class="rede-desc">(11) 99999-9999</p>
-                    <ul class="rede-features">
-                        <li><i class="fas fa-check"></i> Contato direto</li>
-                        <li><i class="fas fa-check"></i> Agendamento rápido</li>
-                        <li><i class="fas fa-check"></i> Tirar dúvidas</li>
-                        <li><i class="fas fa-check"></i> Suporte personalizado</li>
-                        <li><i class="fas fa-check"></i> Informações sobre serviços</li>
-                    </ul>
-                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de mais informações sobre os serviços do STUDIO NK"
-                        class="rede-link">Fale conosco no WhatsApp</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="social-icons">
-                <a href="https://instagram.com/studionkbarbearia" class="social-icon">
+    <!-- Footer Simplificado e Elegante -->
+<footer>
+    <div class="footer-content">
+        <!-- Redes Sociais -->
+        <div class="footer-section">
+            <h4>Siga o Studio NK</h4>
+            <div class="social-icons-footer">
+                <a href="https://instagram.com/studionkbarbearia" class="social-icon-footer" target="_blank">
                     <i class="fab fa-instagram"></i>
+                    <span>@studionkbarbearia</span>
                 </a>
-                <a href="https://wa.me/5511999999999?text=Olá! Gostaria de mais informações sobre os serviços do STUDIO NK"
-                    class="social-icon">
+                <a href="https://wa.me/5511997013477?text=Olá! Gostaria de mais informações sobre os serviços do STUDIO NK" 
+                   class="social-icon-footer" target="_blank">
                     <i class="fab fa-whatsapp"></i>
+                    <span>(12) 99701-3477</span>
                 </a>
             </div>
-            <p class="copyright">© 2025 <span>STUDIO NK</span> — Todos os direitos reservados.</p>
         </div>
-    </footer>
+
+        <!-- Informações de Contato -->
+        <div class="footer-section">
+            <h4>Entre em Contato</h4>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>R. Traipu, 516 - São José dos Campos</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Ter - Sex: 9h às 19h</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>Agendamento pelo nosso site</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Studio NK -->
+        <div class="footer-section">
+            <h4>Studio NK</h4>
+            <p class="footer-bio">Único como você. Exclusividade em cada detalhe</p>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <p class="copyright">© 2025 <span>STUDIO NK</span> — Todos os direitos reservados.</p>
+    </div>
+</footer>
 
     <script>
         // Menu Mobile
@@ -1675,6 +2695,20 @@ footer {
 
         // Inicializar partículas quando a página carregar
         window.addEventListener('load', createParticles);
+
+        // Mostrar header só depois da hero
+window.addEventListener('scroll', () => {
+    const heroSection = document.getElementById('hero');
+    const header = document.getElementById('header');
+
+    const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+    if (window.scrollY > heroBottom - 100) {
+        header.classList.add('visible');
+    } else {
+        header.classList.remove('visible');
+    }
+});
+
     </script>
 </body>
 
