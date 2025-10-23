@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Título Principal -->
-    <title>STUDIO NK - Barbearia Premium em São José dos Campos</title>
+    <title>STUDIO NK - Barbearia</title>
     
     <!-- Meta Description -->
     <meta name="description" content="Barbearia premium em São José dos Campos. Cortes exclusivos, assinaturas mensais, produtos profissionais. Agende seu horário no Studio NK.">
@@ -359,7 +359,7 @@ nav ul li a:hover::after {
 }
 
 .hero-logo {
-    height: 120px;
+    height: 160px;
     margin-bottom: 30px;
 }
 
@@ -2145,6 +2145,65 @@ footer {
         height: 50px;
     }
 }
+
+/* Hero Section - FUNDO SIMPLES E ELEGANTE */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--preto) 0%, var(--azul-tech) 100%);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero-content {
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-logo {
+    height: 160px;
+    margin-bottom: 30px;
+}
+
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0px); 
+    }
+    50% { 
+        transform: translateY(-15px);
+    }
+}
+
+.hero-tagline {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    color: var(--branco);
+    font-weight: 300;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
     </style>
 </head>
 
@@ -2183,7 +2242,7 @@ footer {
             <img src="./assets/logo-nk.png" alt="STUDIO NK" class="hero-logo">
             <p class="hero-tagline">Seu estilo é nossa prioridade!</p>
             <div class="hero-buttons">
-                <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar um horário no STUDIO NK"
+                <a href="https://wa.me/5511997013477?text=Olá! Gostaria de agendar um horário no STUDIO NK"
                     class="btn btn-primary">Agendar Agora</a>
                 <a href="#membros" class="btn btn-secondary">Seja um Membro</a>
             </div>
