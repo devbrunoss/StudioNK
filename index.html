@@ -24,7 +24,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon.ico">
     
     <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="StudioN Barbearia – Presença, Estilo e Autoridade">
+    <meta property="og:title" content="Studio N Barbearia – Presença, Estilo e Autoridade">
     <meta property="og:description" content="Experiência única em cuidados masculinos. Cortes exclusivos, produtos premium e ambiente sofisticado em São José dos Campos.">
     <meta property="og:image" content="https://devbrunoss.github.io/StudioNK/assets/logo-link.png">
     <meta property="og:url" content="https://studionk.com.br">
@@ -34,7 +34,7 @@
     
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="StudioN Barbearia – Presença, Estilo e Autoridade">
+    <meta name="twitter:title" content="Studio N Barbearia – Presença, Estilo e Autoridade">
     <meta name="twitter:description" content="Experiência única em cuidados masculinos. Cortes exclusivos e ambiente sofisticado.">
     <meta name="twitter:image" content="https://devbrunoss.github.io/StudioNK/assets/logo-link.png">
     <meta name="twitter:site" content="@studio n">
@@ -2302,6 +2302,28 @@ footer {
     margin-bottom: 20px;
     font-size: 1.1rem;
 }
+
+/* Remove outline azul mantendo acessibilidade */
+.btn:focus,
+.btn-primary:focus,
+.btn-secondary:focus,
+a:focus,
+button:focus,
+.social-icon:focus,
+.social-icon-footer:focus,
+.faq-question:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.4) !important;
+}
+
+/* Remove dos inputs também se quiser */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.3);
+    border-color: var(--dourado);
+}
     </style>
 </head>
 
@@ -2777,7 +2799,7 @@ footer {
         <!-- CTA de Suporte -->
         <div class="faq-cta">
             <p>Não encontrou o que procurava?</p>
-            <a href="https://wa.me/5511997013477?text=Olá! Tenho uma dúvida sobre os serviços do STUDIO N" class="btn btn-primary">
+            <a href="https://wa.me/5512997013477?text=Olá! Tenho uma dúvida sobre os serviços do STUDIO N" class="btn btn-primary">
                 <i class="fab fa-whatsapp"></i>
                 Fale Conosco
             </a>
@@ -2796,7 +2818,7 @@ footer {
                     <i class="fab fa-instagram"></i>
                     <span>@studionkbarbearia</span>
                 </a>
-                <a href="https://wa.me/5511997013477?text=Olá! Gostaria de mais informações sobre os serviços do STUDIO N" 
+                <a href="https://wa.me/5512997013477?text=Olá! Gostaria de mais informações sobre os serviços do STUDIO N" 
                    class="social-icon-footer" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                     <span>(12) 99701-3477</span>
