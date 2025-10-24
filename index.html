@@ -2324,6 +2324,47 @@ select:focus {
     box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.3);
     border-color: var(--dourado);
 }
+
+/* Animação Hero - Minimalista */
+.hero-content {
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-logo {
+    height: 190px;
+    margin-bottom: 30px;
+}
+
+.hero-tagline {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    color: var(--branco);
+    font-weight: 300;
+    opacity: 0;
+    animation: gentleFadeIn 1s ease-out 1s forwards;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    opacity: 0;
+    animation: gentleFadeIn 1s ease-out 1.5s forwards;
+}
+
+@keyframes gentleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
     </style>
 </head>
 
@@ -2514,7 +2555,7 @@ select:focus {
             </div>
             <div class="economia-item">
                 <i class="fas fa-clock"></i>
-                <span>Agendamento 24/7</span>
+                <span>Agendamento 27/4</span>
             </div>
             <div class="economia-item">
                 <i class="fas fa-star"></i>
