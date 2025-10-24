@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Título Principal -->
-    <title>STUDIO NK - Barbearia</title>
+    <title>StudioN Barbearia – Presença, Estilo e Autoridade</title>
     
     <!-- Meta Description -->
-    <meta name="description" content="Barbearia premium em São José dos Campos. Cortes exclusivos, assinaturas mensais, produtos profissionais. Agende seu horário no Studio NK.">
+    <meta name="description" content="Barbearia premium em São José dos Campos. Cortes exclusivos, assinaturas mensais, produtos profissionais. Agende seu horário no StudioN.">
     
     <!-- Keywords -->
-    <meta name="keywords" content="barbearia, corte de cabelo, São José dos Campos, studio nk, barba, cuidados masculinos, assinatura barbearia">
+    <meta name="keywords" content="barbearia, corte de cabelo, São José dos Campos, studio nk, barba, cuidados masculinos, studio nk barbearia, assinatura barbearia">
     
     <!-- Autor -->
-    <meta name="author" content="STUDIO NK">
+    <meta name="author" content="STUDIO N">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
@@ -24,20 +24,20 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon.ico">
     
     <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Studio NK - Barbearia">
+    <meta property="og:title" content="StudioN Barbearia – Presença, Estilo e Autoridade">
     <meta property="og:description" content="Experiência única em cuidados masculinos. Cortes exclusivos, produtos premium e ambiente sofisticado em São José dos Campos.">
     <meta property="og:image" content="https://devbrunoss.github.io/StudioNK/assets/og-image.jpeg">
     <meta property="og:url" content="https://studionk.com.br">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Studio NK - Barbearia">
+    <meta property="og:site_name" content="StudioN Barbearia – Presença, Estilo e Autoridade">
     <meta property="og:locale" content="pt_BR">
     
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Studio NK - Barbearia">
+    <meta name="twitter:title" content="StudioN Barbearia – Presença, Estilo e Autoridade">
     <meta name="twitter:description" content="Experiência única em cuidados masculinos. Cortes exclusivos e ambiente sofisticado.">
     <meta name="twitter:image" content="https://devbrunoss.github.io/StudioNK/assets/og-image.jpeg">
-    <meta name="twitter:site" content="@studionk">
+    <meta name="twitter:site" content="@studio n">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://studionk.com.br">
@@ -2204,6 +2204,104 @@ footer {
     gap: 20px;
     margin-top: 30px;
 }
+
+/* Seção FAQ Premium */
+.faq {
+    background: linear-gradient(135deg, var(--preto) 0%, var(--azul-tech) 100%);
+    padding: 100px 5%;
+}
+
+.faq-subtitle {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    font-size: 1.1rem;
+    color: var(--branco);
+    opacity: 0.9;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+.faq-question {
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.faq-question h3 {
+    font-size: 1.1rem;
+    color: var(--branco);
+    margin: 0;
+    font-weight: 500;
+}
+
+.faq-question i {
+    color: var(--dourado);
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    padding: 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-answer p {
+    color: var(--branco);
+    opacity: 0.8;
+    line-height: 1.6;
+    margin: 0 0 25px 0;
+}
+
+/* Estado ativo */
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 30px 25px;
+}
+
+/* CTA do FAQ */
+.faq-cta {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.faq-cta p {
+    color: var(--branco);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
     </style>
 </head>
 
@@ -2215,7 +2313,7 @@ footer {
     <header id="header">
         <div class="header-container">
             <a href="#hero" class="logo-link">
-                <img src="./assets/logo-nk.png" alt="STUDIO NK" class="logo">
+                <img src="./assets/logo-nk.png" alt="STUDIO N" class="logo">
             </a>
 
             <div class="mobile-menu" id="mobile-menu">
@@ -2231,6 +2329,7 @@ footer {
                     <li><a href="#reserva">Reserva</a></li>
                     <li><a href="#localizacao">Localização</a></li>
                     <li><a href="#redes">Redes Sociais</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                 </ul>
             </nav>
         </div>
@@ -2239,10 +2338,10 @@ footer {
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-content">
-            <img src="./assets/logo-nk.png" alt="STUDIO NK" class="hero-logo">
+            <img src="./assets/logo-nk.png" alt="STUDIO N" class="hero-logo">
             <p class="hero-tagline">Seu estilo é nossa prioridade!</p>
             <div class="hero-buttons">
-                <a href="https://wa.me/5511997013477?text=Olá! Gostaria de agendar um horário no STUDIO NK"
+                <a href="https://online.maapp.com.br/Studionkbarbearia?fbclid=PAZXh0bgNhZW0CMTEAAaciNKTC1d5dUqnWZxchQkdIToC2aObWS2YCkwwQW4tyyF3xSdDUOoLO_8-EBA_aem_4skpnWbjH1WsxkE3Fsy33g"
                     class="btn btn-primary">Agendar Agora</a>
                 <a href="#membros" class="btn btn-secondary">Seja um Membro</a>
             </div>
@@ -2264,7 +2363,7 @@ footer {
                     </div>
                     <h3 class="plano-title-moderno">Clube Corte Ilimitado</h3>
                     <div class="plano-price-moderno">
-                        <span class="valor">R$ 69,90</span>
+                        <span class="valor">R$ 69,99</span>
                         <span class="periodo">/mês</span>
                     </div>
                 </div>
@@ -2272,7 +2371,7 @@ footer {
                     <ul class="plano-features-moderno">
                         <li><i class="fas fa-check"></i> Cortes ilimitados no mês</li>
                         <li><i class="fas fa-check"></i> Atendimento sem filas</li>
-                        <li><i class="fas fa-check"></i> 40% de desconto em produtos e atendimento com toda a equipe<li>
+                        <li><i class="fas fa-check"></i> 20% de desconto em produtos e atendimento com toda a equipe<li>
                     </ul>
                     <div class="plano-cta">
                         <a href="https://celcash.celcoin.com.br/landingpage7810471/studionk/assinar/clube-corte-ilimitado/1" class="btn-plano-moderno">Assinar</a>
@@ -2288,7 +2387,7 @@ footer {
                     </div>
                     <h3 class="plano-title-moderno">Clube Barba Ilimitado</h3>
                     <div class="plano-price-moderno">
-                        <span class="valor">R$ 79,90</span>
+                        <span class="valor">R$ 79,99</span>
                         <span class="periodo">/mês</span>
                     </div>
                 </div>
@@ -2312,7 +2411,7 @@ footer {
                     </div>
                     <h3 class="plano-title-moderno">Clube Combo Ilimitado</h3>
                     <div class="plano-price-moderno">
-                        <span class="valor">R$ 149,90</span>
+                        <span class="valor">R$ 149,99</span>
                         <span class="periodo">/mês</span>
                     </div>
                 </div>
@@ -2337,7 +2436,7 @@ footer {
                     </div>
                     <h3 class="plano-title-moderno">Clube VIP</h3>
                     <div class="plano-price-moderno">
-                        <span class="valor">R$ 169,90</span>
+                        <span class="valor">R$ 169,99</span>
                         <span class="periodo">/mês</span>
                     </div>
                 </div>
@@ -2363,7 +2462,7 @@ footer {
                     </div>
                     <h3 class="plano-title-moderno">Clube Premium</h3>
                     <div class="plano-price-moderno">
-                        <span class="valor">R$ 249,90</span>
+                        <span class="valor">R$ 249,99</span>
                         <span class="periodo">/mês</span>
                     </div>
                 </div>
@@ -2375,7 +2474,7 @@ footer {
                         <li><i class="fas fa-check"></i> 1 serviço extra de ticket alto (ex: limpeza facial)</li>
                         <li><i class="fas fa-check"></i> Todos os extras de ticket baixo inclusos</li>
                         <li><i class="fas fa-check"></i> 1 brinde da barbearia</li>
-                        <li><i class="fas fa-check"></i> 50% de desconto em produtos</li>
+                        <li><i class="fas fa-check"></i> 30% de desconto em produtos</li>
                     </ul>
                     <div class="plano-cta">
                         <a href="https://celcash.celcoin.com.br/landingpage7810471/studionk/assinar/clube-premium/3" class="btn-plano-moderno destaque">Assinar</a>
@@ -2459,8 +2558,8 @@ footer {
                 <div class="vantagem-icon">
                     <i class="fas fa-percent"></i>
                 </div>
-                <h3 class="vantagem-title">40% Off Serviços</h3>
-                <p class="vantagem-desc">40% de desconto em todos os produtos e serviços extras adicionais.</p>
+                <h3 class="vantagem-title">20% Off Serviços</h3>
+                <p class="vantagem-desc">20% de desconto em serviços extras só pra VIP e premium.</p>
             </div>
 
             <!-- Vantagem 7 -->
@@ -2469,7 +2568,7 @@ footer {
                     <i class="fas fa-users"></i>
                 </div>
                 <h3 class="vantagem-title">Atendimento Completo</h3>
-                <p class="vantagem-desc">Atendimento com toda a equipe especializada da Studio NK.</p>
+                <p class="vantagem-desc">Atendimento com toda a equipe especializada da StudioN.</p>
             </div>
 
             <!-- Vantagem 8 -->
@@ -2491,15 +2590,15 @@ footer {
     <!-- Seção Por que - VERSÃO COM NÚMEROS IMPACTANTES -->
 <section class="vantagens" id="vantagens">
     <div class="container">
-        <h2>Por que escolher Studio NK?</h2>
+        <h2>Por que escolher StudioN?</h2>
 
         <div class="vantagens-grid-moderno">
             <!-- Vantagem 1 -->
             <div class="vantagem-item-moderno hidden">
-                <div class="vantagem-numero">+--</div>
+                <div class="vantagem-numero">+5</div>
                 <div class="vantagem-conteudo">
-                    <h3 class="vantagem-title-moderno">anos de tradição</h3>
-                    <p class="vantagem-desc-moderno">Anos de excelência e dedicação em cada corte</p>
+                    <h3 class="vantagem-title-moderno">Anos de Dedicação</h3>
+                    <p class="vantagem-desc-moderno">Desde 2020, combinando técnica, estilo e dedicação em cada corte</p>
                 </div>
                 <div class="vantagem-icon-moderno">
                     <i class="fas fa-award"></i>
@@ -2508,9 +2607,9 @@ footer {
 
             <!-- Vantagem 2 -->
             <div class="vantagem-item-moderno hidden">
-                <div class="vantagem-numero">+---</div>
+                <div class="vantagem-numero">+15.000</div>
                 <div class="vantagem-conteudo">
-                    <h3 class="vantagem-title-moderno">cortes realizados</h3>
+                    <h3 class="vantagem-title-moderno">atendimentos realizados</h3>
                     <p class="vantagem-desc-moderno">Experiência comprovada em cada atendimento</p>
                 </div>
                 <div class="vantagem-icon-moderno">
@@ -2601,18 +2700,103 @@ footer {
         </div>
     </section>
 
+    <!-- Seção FAQ Premium -->
+<section class="faq" id="faq">
+    <div class="container">
+        <h2>Perguntas Frequentes</h2>
+        <p class="faq-subtitle">Tire suas dúvidas sobre nossos serviços e assinaturas</p>
+
+        <div class="faq-container">
+            <!-- Pergunta 1 -->
+            <div class="faq-item hidden">
+                <div class="faq-question">
+                    <h3>Como funcionam as assinaturas mensais?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Nossas assinaturas são planos mensais que garantem cortes e benefícios regulares. Você escolhe o plano que melhor se adapta à sua rotina e paga uma mensalidade fixa, com descontos progressivos conforme sobe de categoria.</p>
+                </div>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="faq-item hidden">
+                <div class="faq-question">
+                    <h3>Posso cancelar a qualquer momento?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Sim! Todas as assinaturas podem ser canceladas a qualquer momento sem multa. O cancelamento é feito diretamente pela plataforma de pagamento e é válido para o próximo ciclo.</p>
+                </div>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="faq-item hidden">
+                <div class="faq-question">
+                    <h3>Como funciona o agendamento?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>O agendamento é feito pelo nosso site oficial. Membros têm prioridade com horários exclusivos. Você agenda seu horário preferido e garantimos pontualidade.</p>
+                </div>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div class="faq-item hidden">
+                <div class="faq-question">
+                    <h3>Os cortes ilimitados têm alguma restrição?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Nenhuma restrição! Nos planos você pode vir quantas vezes quiser durante o mês. A única limitação é o horário disponível para agendamento.</p>
+                </div>
+            </div>
+
+            <!-- Pergunta 5 -->
+            <div class="faq-item hidden">
+                <div class="faq-question">
+                    <h3>Quais formas de pagamento aceitam?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Aceitamos cartão de crédito, débito, PIX e dinheiro. Para assinaturas, o pagamento é recorrente no cartão ou PIX automático.</p>
+                </div>
+            </div>
+
+            <!-- Pergunta 6 -->
+            <div class="faq-item hidden">
+                <div class="faq-question">
+                    <h3>Preciso agendar com antecedência?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Recomendamos agendar com 1-2 dias de antecedência para garantir seu horário preferido. Membros VIP e Magnata têm flexibilidade para agendamentos de última hora.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA de Suporte -->
+        <div class="faq-cta">
+            <p>Não encontrou o que procurava?</p>
+            <a href="https://wa.me/5511997013477?text=Olá! Tenho uma dúvida sobre os serviços do STUDIO N" class="btn btn-primary">
+                <i class="fab fa-whatsapp"></i>
+                Fale Conosco
+            </a>
+        </div>
+    </div>
+</section>
+
     <!-- Footer Simplificado e Elegante -->
 <footer>
     <div class="footer-content">
         <!-- Redes Sociais -->
         <div class="footer-section">
-            <h4>Siga o Studio NK</h4>
+            <h4>Siga o Studio N</h4>
             <div class="social-icons-footer">
                 <a href="https://instagram.com/studionkbarbearia" class="social-icon-footer" target="_blank">
                     <i class="fab fa-instagram"></i>
                     <span>@studionkbarbearia</span>
                 </a>
-                <a href="https://wa.me/5511997013477?text=Olá! Gostaria de mais informações sobre os serviços do STUDIO NK" 
+                <a href="https://wa.me/5511997013477?text=Olá! Gostaria de mais informações sobre os serviços do STUDIO N" 
                    class="social-icon-footer" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                     <span>(12) 99701-3477</span>
@@ -2630,7 +2814,9 @@ footer {
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-clock"></i>
+                    <span>Seg: 9h às 18h</span>
                     <span>Ter - Sex: 9h às 19h</span>
+                    <span>Sab: 8:30h às 15h</span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
@@ -2648,7 +2834,7 @@ footer {
 
     <!-- Copyright -->
     <div class="footer-bottom">
-        <p class="copyright">© 2025 <span>STUDIO NK</span> — Todos os direitos reservados.</p>
+        <p class="copyright">© 2025 <span>STUDIO N</span> — Todos os direitos reservados.</p>
     </div>
 </footer>
 
@@ -2766,6 +2952,14 @@ window.addEventListener('scroll', () => {
     } else {
         header.classList.remove('visible');
     }
+});
+
+// FAQ Accordion
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const item = question.parentElement;
+        item.classList.toggle('active');
+    });
 });
 
     </script>
