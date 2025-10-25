@@ -2365,6 +2365,35 @@ select:focus {
         transform: translateY(0);
     }
 }
+
+.horarios-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.horarios-lista span {
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .horarios-lista {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .horarios-lista span {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+}
     </style>
 </head>
 
@@ -2876,14 +2905,12 @@ select:focus {
                     <i class="fas fa-map-marker-alt"></i>
                     <span>R. Traipu, 516 - São José dos Campos</span>
                 </div>
-                <div class="contact-item">
+                <div class="horarios-lista">
                     <i class="fas fa-clock"></i>
-                    <span>Segunda: 9h às 18h</span>
-<span>Terça: 9h às 19h</span>
-<span>Quarta: 9h às 19h</span>
-<span>Quinta: 9h às 19h</span>
-<span>Sexta: 9h às 20h</span>
-<span>Sábado: 8:30h às 15h</span>
+                    <span>Seg: 9h às 18h</span>
+    <span>Ter-Qui: 9h às 19h</span>
+    <span>Sex: 9h às 20h</span>
+    <span>Sáb: 8:30h às 15h</span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
